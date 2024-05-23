@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+:root {
+  --accent-color: #1fa8f5;
+  --accent-color-fg: #fefefe;
+}
+
+body{
+    background-color: #89d4fe;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    display: flex;
+    padding: 3vh 5vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+[class*="screen"]{
+    border: none;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 620px;
+    width: 300px;
+    min-width: 300px;
+    margin-right: 3vw;
+    margin-top: 3vh;
+    padding: 1.6rem 1rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.raised{
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.15);
+}
+
+.clay{
+    --height: 8px;
+    --height-reverse: -8px;
+    --spread: 12px;
+    --shadow-spread: 16px;
+
+    border-radius: 2rem;
+    box-shadow: var(--height) var(--height) var(--shadow-spread) 0
+      rgba(31, 168, 245, 0.8),
+    /* Outset shadow */ inset var(--height-reverse) var(--height) var(--spread)
+      0 rgba(39, 158, 224, 1),
+    /* Dark inset shadow */ inset var(--height) var(--height) var(--spread) 0
+      rgba(255, 255, 255, 0.4); /* Light inset shadow */
+}
+
+@media screen and (min-width: 1200px) {
+    .screen-2{
+        position: relative;
+        top: 4rem;
+    }
+    .screen-3{
+        position: relative;
+        top: 8rem;
+    }    
+}
+
+/* screen -1 */
+.cs-name{
+    display: flex;
+    justify-content: space-between;
+    
+    span{
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .bell{
+        position: relative;
+        top: -5px;
+        font-size: 1.3rem;
+        color: #aca7a7;
+    }
+}
+
+.cs-search{
+    display: flex;
+    margin-top: 1.6rem;
+    position: relative;
+    color: #cab5b5;
+
+    input{
+        width: 100%;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+        font-size: 0.6rem;
+        line-height: 2;
+        border: none;
+        border-radius: 0.6rem;
+
+        &::placeholder{
+            color: #9e9494;
+        }
+
+        &::focus{
+            outline: 1px solid #ccc;
+        }
+    }
+
+    .search-icon{
+        position: absolute;
+        left: 0.5rem;
+        top: 8px;
+        font-size: 1.2rem;
+    }
+}
+
+.cs-calendar{
+    --height: 4px;
+    --height-reverse: -4px;
+    --spread: 8px;
+    --shadow-spread: 12px;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    color: var(--accent-color-fg);
+    background-color: var(--accent-color);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+
+    .month-year-controls{
+        display: flex;
+        align-items: center;
+    }
+
+    .arrows{
+        margin-right: 8px;
+        display: flex;
+    }
+
+    [class*="chevron"]{
+        display: flex;
+        align-items: center;
+        padding: 1px;
+        justify-content: center;
+        background-color: rgb(255, 255, 255, 0.4);
+        height: 0.8rem;
+        width: 0.8rem;
+        border-radius: 3px;
+        font-size: 0.9rem;
+        cursor: pointer;
+
+        &:first-child{
+            margin-right: 4px;
+        }
+
+        &:hover{
+            background-color: rgb(255, 255, 255, 0.8);
+        }
+    }
+
+    .month-table{
+        display: grid;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        grid-auto-rows: minmax(1.5rem, auto);
+        margin-top: 1.5rem;
+
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.4rem;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.off{
+                opacity: 0.5;
+            }
+
+            &.today,
+            &:hover{
+                --height:3px;
+                --height-reverse: -3px;
+                --spread: 4px;
+                --shadow-spread: 8px;
+
+                background-color: var(--accent-color-fg);
+                color: var(--accent-color);
+            }
+        }
+        
+    }
+
+    .cs-footer{
+        z-index: 200;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.9rem 0.6rem;
+        width: 279px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 -2px 4px 2px rgba(0,0,0,0.1);
+        color: var(--accent-color);
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 5rem;
+        background-color: #aca7a7;
+
+        btn-cart{
+            color: #dfdfdf;
+            margin-right: 40px;
+
+            &:hover{
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    .btn-home{
+        margin-right: 40px;
+        margin-left: 40px;
+        border-radius: 5px;
+        color: var(--accent-color);
+    }
+
+    .btn-add{
+        --height-right:4px;
+        --height-reverse: -4px;
+        --spread: 8px;
+        --shadow-spread: 12px;
+    }
+}
