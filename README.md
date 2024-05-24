@@ -21,10 +21,6 @@ This Task Management App is designed to help users plan and manage their daily t
 ## License
 This project is made available under the MIT License.
 
-## Contact
-For any inquiries or contributions, please contact John Doe at [email protected]
-
----
 
 Made by: @HillaryMurai
 Inspired by: Vitalii Zhy
