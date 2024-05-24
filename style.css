@@ -186,7 +186,7 @@ body {
     span {
       display: flex;
       justify-content: center;
-      align-item: center;
+      align-items: center;
       line-height: 1.4rem;
       letter-spacing: 1px;
       border-radius: 5px;
@@ -347,7 +347,10 @@ li {
 
   .education {
     --color: #fce59c;
-  
+  }
+}
+
+/* screen 2 */
 
 .screen-2 {
   background-color: #4dadf7;
@@ -418,7 +421,7 @@ li {
           background-color: #4dadf7;
         }
       }
-    } // nav
+    }  nav
 
     h1 {
       font-size: 1.4rem;
@@ -461,7 +464,7 @@ button {
   cursor: pointer;
 }
 
-// screen 3
+/* screen 3 */
 .screen-3 {
   position: relative;
   background-color: #f6f6f6;
@@ -534,7 +537,9 @@ button {
         --shadow-spread: 24px;
       }
     }
-  } // your plans
+  } 
+  
+  /* your-plans */
 
   .timeline {
     position: relative;
@@ -645,7 +650,7 @@ button {
         background-color: var(--accent-color);
       }
     }
-  } // timeline
+  } /* timeline */
 
   .status {
     padding: 1rem;
@@ -679,7 +684,9 @@ button {
       padding-left: 0.8rem;
       box-sizing: border-box;
     }
-  } // status
+  } 
+  
+  /*status bar*/
 
   .today-plans-title {
     justify-content: space-between;
@@ -723,7 +730,9 @@ button {
         position: relative;
         top: -2px;
       }
-    } //item
+    } 
+    
+    /*item */
 
     .info {
       padding: 0;
@@ -746,7 +755,9 @@ button {
         display: inline-flex;
         justify-content: center;
       }
-    } // info
+    } 
+    
+    /* info */
 
     .attendees {
       position: relative;
@@ -784,9 +795,12 @@ button {
         color: #f9cb39;
         align-self: flex-end;
       }
-    } // attendees
+    } 
+    /* attendees */
   }
-} // screen 3
+} 
+
+/* screen 3 */
 
 .flatter {
   --height: 4px;
@@ -808,7 +822,8 @@ button {
   align-items: center;
 }
 
-// background
+/* background */
+
 .bubbles {
   position: absolute;
   width: 100%;
